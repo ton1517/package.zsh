@@ -1,6 +1,6 @@
 # -*- sh -*-
 
-: ${PACKAGE_BASE_DIR:="$HOME/.zsh.d/packages"}
+: ${PACKAGE_BASE_DIR:="$HOME/.zsh/packages"}
 
 package-directory()
 {
@@ -24,7 +24,7 @@ package-install-github()
     local name=$1
     local package_dir="$2"
 
-    package-run-command git clone https://github.com/${name}.git "${package_dir}"
+    package-run-command git clone git://github.com/${name}.git "${package_dir}"
 }
 
 package-install()
